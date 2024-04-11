@@ -1,0 +1,21 @@
+.head{
+    text-align: center;
+}
+
+body{
+    background-color: aqua;
+}
+
+.fed{
+    border:2px solid black ;
+    background-color: rgb(236, 241, 187);
+    padding: 10px;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.text{
+    font-size: 30px;
+}

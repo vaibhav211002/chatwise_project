@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style1.css">
+</head>
+<body>
+    <h1 class="heading">Welcome to Connect.io</h1>
+    <div class="feed">
+        <a href="/feed" class="feed_head">Open Your Feed</a>
+
+    </div>
+   
+    <h2>Hello , Welcome <%= userdata.username %> </h2>
+    <div class="friends-list">
+        <h3>Friend !!! </h3> 
+        <% userdata.friends.forEach(element => { %>
+            <li><%= element.username %></li>
+        <% }) %> 
+    </div>
+    
+
+    <div class="card">
+        <h4>All Post</h4>
+        <% userdata.postlist.forEach(element => { %>
+            <li><%= element.text %></li>
+        <% }) %> 
+    </div>
+
+
+    <div class="req">
+        <h2>Friends Request Pending</h2>
+        <% userdata.requests.forEach(element => { %>
+            <form action="/requesthandling" method="post">
+                <input type="hidden" name="user" value="<%= element.userid %>">
+                <li><%= element.username %> <input type="submit" name="decline" value="Decline Request"></li>
+            </form>
+        <% }) %> 
+    </div>
+
+    <div class="frnd">
+        <h2>Received Friend Request </h2>
+        <% userdata.received_request.forEach(element => { %>
+            <form action="/reqreshandling" method="post">
+                <input type="hidden" name="user" value="<%= element.userid %>">
+                <input type="hidden" name="username" value="<%= element.username %>">
+                <li><%= element.username %>
+                    <input type="submit" name="action" value="decline"> 
+                    <input type="submit" name="action" value="accept"> 
+                </li>
+            </form>
+        <% }) %>
+    </div>
+
+
+
+
+
+    <div class="write_post">
+        <H3>Write a New Post </H3>
+        <form action="/home" method="post">
+            <input class="inputfield" type="text" name="content" >
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    <div class="connect">
+        <h2 >Connect to more users !!</h2>
+
+        
+        <% allusers.forEach(element => { %>
+            <form action="/sendrequest" method="post">
+                <input type="hidden" name="userid" value="<%= element.userid %>">
+                <li><%= element.username %> <input type="submit" value="Send Request"></li>
+            </form>
+        <% }) %>
+        
+   
+
+    </div>
+
+    <div class="log">
+        <form action="/LoginPage" method="get">
+            <input type="submit" value="Log Out">
+        </form>
+        
+    </div>
+
+
+    
+</body>
+</html>

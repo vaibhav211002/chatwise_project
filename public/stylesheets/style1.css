@@ -1,0 +1,88 @@
+.heading{
+    border: 2px black solid;
+    background-color: aquamarine;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #abdcef;
+}
+a{
+    text-align: center;
+
+}
+
+.feed{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    justify-content: center;
+
+}
+
+.feed_head{
+    background-color: rgb(235, 154, 136);
+    height: 20px;
+    padding: 10px;
+}
+
+.friends-list{
+    border: 2px slateblue solid;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: aqua;
+}
+
+.card{
+    margin-top: 5px;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(233, 167, 130);
+}
+
+.req{
+    margin-top: 5px;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(224, 231, 25);
+}
+
+.connect{
+    margin-top: 5px;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(255, 101, 252);
+
+}
+
+.frnd{
+    margin-top: 5px;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(179, 245, 164);
+
+}
+
+.write_post{
+    margin-top: 5px;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(16, 191, 239);
+
+}
+
+.log{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    justify-content: center;
+
+}

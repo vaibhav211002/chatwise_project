@@ -1,0 +1,4 @@
+    <h3>Friends Request Pending</h3>
+    <% friendata.requests.forEach(element => { %>
+        <li><%= element.username %></li>
+    <% }) %> 
