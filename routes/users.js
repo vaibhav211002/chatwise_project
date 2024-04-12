@@ -12,7 +12,6 @@ const userSchema = new mongoose.Schema({
   requests: [{ type: mongoose.Schema.Types.ObjectId, ref : 'User' }], 
   received_request: [{ type: mongoose.Schema.Types.ObjectId , ref : 'User'}] 
 });
-
 userSchema.methods.comparePassword = async function(candidatePassword) {
   try {
       return await bcrypt.compare(candidatePassword, this.password);
@@ -20,6 +19,5 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
       throw new Error(error);
   }
 };
-
 const UserModel = mongoose.model('User' , userSchema);
 module.exports = UserModel ;

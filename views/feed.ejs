@@ -13,8 +13,20 @@
         <% posts.forEach(element => { %>
             <li class="name"> Author : <%= element.name %></li>
             <p class="text"><%= element.text %></p>
-        <% }) %> 
+            <h4>Comments</h4>
+            <ul>
+                <% postsWComments[0].forEach(comment => { %>
+                    <li><%= comment.text %> - <small> BY <%= comment.createdBy %></small></li>
+                <% }) %>
+            </ul>
 
+            <form action="/add-comment/<%= element._id %>" method="POST">
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="text" required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+
+        <% }) %> 
     </div>
 
 
